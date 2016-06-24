@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B2FA25BD-1B38-4482-9BB4-F1CEBCADBAE2}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Battery</RootNamespace>
+    <AssemblyName>Battery</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Battery_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Battery_SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Images\Battery_StoreLogo.scale-100.png" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_000.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_001.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_002.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_003.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_004.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_005.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_006.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_007.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_008.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_009.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_010.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_011.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_012.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_013.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_014.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_015.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_016.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_017.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_018.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_019.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_020.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_021.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_022.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_023.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_024.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_025.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_026.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_027.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_028.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_029.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_030.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_031.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_032.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_033.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_034.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_035.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_036.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_037.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_038.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_039.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_040.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_041.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_042.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_043.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_044.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_045.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_046.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_047.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_048.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_049.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_050.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_051.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_052.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_053.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_054.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_055.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_056.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_057.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_058.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_059.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_060.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_061.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_062.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_063.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_064.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_065.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_066.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_067.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_068.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_069.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_070.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_071.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_072.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_073.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_074.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_075.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_076.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_077.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_078.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_079.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_080.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_081.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_082.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_083.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_084.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_085.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_086.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_087.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_088.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_089.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_090.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_091.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_092.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_093.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_094.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_095.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_096.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_097.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_098.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_099.jpg" />
+    <Content Include="VisualElements\Battery_c\battery_tile_c_100.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_000.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_001.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_002.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_003.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_004.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_005.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_006.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_007.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_008.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_009.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_010.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_011.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_012.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_013.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_014.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_015.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_016.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_017.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_018.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_019.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_020.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_021.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_022.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_023.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_024.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_025.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_026.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_027.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_028.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_029.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_030.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_031.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_032.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_033.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_034.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_035.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_036.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_037.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_038.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_039.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_040.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_041.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_042.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_043.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_044.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_045.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_046.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_047.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_048.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_049.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_050.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_051.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_052.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_053.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_054.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_055.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_056.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_057.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_058.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_059.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_060.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_061.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_062.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_063.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_064.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_065.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_066.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_067.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_068.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_069.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_070.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_071.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_072.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_073.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_074.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_075.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_076.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_077.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_078.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_079.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_080.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_081.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_082.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_083.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_084.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_085.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_086.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_087.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_088.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_089.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_090.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_091.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_092.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_093.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_094.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_095.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_096.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_097.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_098.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_099.jpg" />
+    <Content Include="VisualElements\Battery_d\battery_tile_d_100.jpg" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AnnimationEffectTools.cs" />
+    <Compile Include="BatteryHandler.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Battery_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BGTask\SampleBG.csproj">
+      <Project>{2b479474-fa92-4b60-93cb-0d48974e12ba}</Project>
+      <Name>SampleBG</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
