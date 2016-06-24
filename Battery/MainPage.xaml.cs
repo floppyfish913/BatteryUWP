@@ -23,6 +23,7 @@ namespace Battery
         private int PulsingStatus, PulsingResolution, PulsingTime_ms;
         private Point center;
         private BatteryHandler bHandler;
+        private int config = 0;
 
         //private int temp = 0;
         public MainPage()
@@ -208,6 +209,22 @@ namespace Battery
             }
 
         }
+
+      
+        private void ConfigRect_DoubleTapped(object sender, Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
+        {
+            config++;
+            if (config % 10 == 0)
+            {
+                ConfigPath.Text = bHandler.getConfigFolderPath();
+                ConfigPath.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ConfigPath.Visibility = Visibility.Collapsed;
+            }
+        }
+       
 
         public void UpdateTile()
         {

@@ -36,9 +36,11 @@
                 </Path>
                 <TextBlock  TextWrapping="Wrap" Text="Discharging" Canvas.Top="450" FontSize="64" Foreground="White" Width="400" Canvas.Left="440" TextAlignment="Center" x:Name="StatusTextBlock"/>
                 <Image HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="200" Source="Images\AC.png" Canvas.Left="1070" Canvas.Top="420" Opacity="0.7" x:Name="AC_pic"/>
+                <TextBox x:Name="ConfigPath" Canvas.Left="63" TextWrapping="Wrap" Text="TextBox" Canvas.Top="43" Width="393" Visibility="Collapsed" />
+                <Rectangle x:Name="ConfigButton" Fill="#00F4F4F5" Height="24" Canvas.Left="642" Canvas.Top="160" Width="20" DoubleTapped="ConfigRect_DoubleTapped" />
             </Canvas>
-            
+
         </Grid>
-        
+
     </Grid>
 </Page>

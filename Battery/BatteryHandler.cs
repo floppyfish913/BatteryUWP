@@ -13,6 +13,7 @@ namespace BatteryHnd
         private int Percentage;
 
         private StorageFolder ConfigFolder;
+
         private StorageFile BatteryInfoFile;
 
 
@@ -86,6 +87,11 @@ namespace BatteryHnd
             }
         }
 
+        public string getConfigFolderPath()
+
+        {
+            return ConfigFolder.Path;
+        }
 
         ////////////////////////////////////////////////////
         // 
@@ -111,7 +117,7 @@ namespace BatteryHnd
             return Percentage;
         }
 
-
+        
     }
 
 }
